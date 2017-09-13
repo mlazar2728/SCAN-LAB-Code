@@ -31,18 +31,20 @@ def write_csv(value):
 		csvfile.close()
 
 
-header_labels = ['Participant ID', 'IR Trial 1 Raw', 'IR Trail 1 SS', 'IR Trial 1 SC Raw', 'IR Trial 1 SC SS', 'IR Trial 1 RD Raw', 'IR Trial 1 RD SS', 'IR Trial 2 Raw', 'IR Trail 2 SS', 'IR Trial 2 SC Raw', 'IR Trial 2 SC SS', 'IR Trial 2 RD Raw', 'IR Trial 2 RD SS', 'IR Trial 3 Raw', 'IR Trail 3 SS', 'IR Trial 3 SC Raw', 'IR Trial 3 SC SS', 'IR Trial 3 RD Raw', 'IR Trial 3 RD SS','IR Trial 4 Raw', 'IR Trail 4 SS', 'IR Trial 4 SC Raw', 'IR Trial 4 SC SS', 'IR Trial 4 RD Raw', 'IR Trial 4 RD SS', 'IR Trial 5 Raw', 'IR Trial 5 SS', 'IR Trial 5 SC Raw', 'IR Trial 5 SC SS', 'IR Trial 5 RD Raw', 'IR Trial 5 RD SS', 'Total Trials 1-5 Raw', 'Totals Trials 1-5 T-score', 'Trials 1-5 SC Raw', 'Trials 1-5 SC SS', 'Trials 1-5 RD Raw', 'Trials 1-5 RD SS','IR Trial B Raw', 'IR Trail B SS', 'IR Trial B SC Raw', 'IR Trial B SC SS', 'IR Trial B RD Raw', 'IR Trial B RD SS', 'SD FR Raw', 'SD FR SS', 'SD FR SC Raw', 'SD FR SC SS', 'SD FR RD Raw', 'SD FR RD SS','SD CR Raw', 'SD CR SS', 'SD CR SC Raw', 'SD CR SC SS', 'SD CR RD Raw', 'SD CR RD SS','LD FR Raw', 'LD FR SS', 'LD FR SC Raw', 'LD FR SC SS', 'LD FR RD Raw', 'LD FR RD SS', 'LD CR Raw', 'LD CR SS', 'LD CR SC Raw', 'LD CR SD SS', 'LD CR RD Raw', 'LD CR RD SS',
-'LC Semantic Clustering Raw', 'LC Semantic Clustering SS', 'LC Serial Clustering Forward Raw', 'LC Serial Clustering Forward SS', 'LC Serial Clustering Bidiretional Raw', 'LC Serial Clustering Bidirectional SS', 'LC Subjective Clustering Bidirectional Raw','LC Subjective Clustering Bidirectional SS', 'LC % Recall from Primacy Raw', 'LC % Recall from Primacy SS', 'LC % Recall from Middle Raw', 'LC % Recall from Middle SS', 'LC % Recall from Recency Raw', 'LC % Recall from Recency SS', 'LC Total Learning Slope Trials 1-5 Raw', 'LC Total Learning Slope Tirals 1-5 SS', 'LC Learning Slope Trials 1-2 Raw', 'LC Learning Slope Trials 1-2 SS', 'LC Learning Slope Trials 2-5 Raw', 'LC Learning Slope Trials 2-5 SS', 'LC Across-Trial Recall Consistency Raw', 'LC Across-Trial Recall Consistency SS', 'RCM Proactive Interference List B vs. Trial 1 Percent Change', 'RCM Proactive Interference List B vs. Trial 1 Z-Score Difference', 'RCM Short-Delay Retention/Retroactive Interference Short Delay Free Recall vs. Trial 5 Percent Change', 'RCM Short-Delay Retention/Retroactive Interference Short Delay Free Recall vs. Trial 5 Z-Score Difference', 'RCM Long-Delay Retention Long Delay Free Recall vs. Trial 5 Percent Change', 'RCM Long-Delay Retention Long Delay Free Recall vs. Trial 5 Z-Score Difference', 'RCM Long-Delay Retention Long Delay Free Recall vs. Short Delay Free Recall Percent Change', 'RCM Long-Delay Retention Long Delay Free Recall vs. Short Delay Free Recall Z-score Difference', 'RE Total Repetitions (All Recall Trials) Raw',
-'RE Total Repetitions (All Recall Trials) SS', 'RE Total Intrusions (All Recall Trials, All Types) Raw', 'RE Total Intrusions (All Recall Trials, All Types) SS', 'RE Total Imediate Recall Intrusions (Trials 1-5, All Types) Raw', 'RE Total Imediate Recall Intrusions (Trials 1-5, All Types) SS', 'RE Total Delayed Recall Intrusions (Free & Cued All Types) Raw', 'RE Total Delayed Recall Intrusions (Free & Cued All Types) SS', 'RE Total Free Recall Intrusions (Immed. & Delayed, All Types) Raw', 'RE Total Free Recall Intrusions (Immed. & Delayed, All Types) SS', 'RE Total Cued Recall Intrusions (All Types) Raw', 'RE Total Cued Recall Intrusions (All Types) SS', 'RE Total Non-Category Intrusions (All Recall Trials) Raw', 'RE Total Non-Category Intrusions (All Recall Trials) % with this score', 'RE Total Non-Category Intrusions (All Recall Trials) Cum. % w/better score', 'RE Total Synonym/Subordinate Intrusions (All Recall Trials) Raw', 'RE Total Synonym/Subordinate Intrusions (All Recall Trials) % with this score', 'RE Total Synonym/Subordinate Intrusions (All Recall Trials) Cum. % w/better score', 'RE Total Across-List Intrusions (List B & Delayed Recall Trials) Raw',
-'RE Total Across-List Intrusions (List B & Delayed Recall Trials) % with this score', 'RE Total Across-List Intrusions (List B & Delayed Recall Trials) Cum. % w/better score', 'RE Total Recall Discriminability (List A, All Trials vs. Total Intrusions) Raw', 'RE Total Recall Discriminability (List A, All Trials vs. Total Intrusions) SS', 'RE Immediate Recall Discriminability (List A, Trials 1-5 vs. Intrusions, Trials 1-5) Raw', 'RE Immediate Recall Discriminability (List A, Trials 1-5 vs. Intrusions, Trials 1-5) SS', 'RE Delayed Recall Discriminability (List A vs. Intrusions, Delayed Recall Trials) Raw', 'RE Delayed Recall Discriminability (List A vs. Intrusions, Delayed Recall Trials) SS', 'Free Recall Discriminability (List A vs. Intrusions, Immed. & Delayed Free Recall Trials) Raw', 'Free Recall Discriminability (List A vs. Intrusions, Immed. & Delayed Free Recall Trials) SS', 'RE Cued Recall (List A vs. Intrusions, Cued Recall Trials) Raw', 'RE Cued Recall (List A vs. Intrusions, Cued Recall Trials) SS', 'DRT Yes/No Recognitions Total Hits Raw', 'DRT Yes/No Recognitions Total Hits SS', 'DRT Yes/No Recognitions Total False Positives Raw', 'DRT Yes/No Recognitions Total False Positives SS',
-'DRT Yes/No Recognitions Total Recognition Dsicriminability (d) (Hits vs. Total False Positives) Raw', 'DRT Yes/No Recognitions Total Recognition Discriminability (d) (Hits vs. Total False Positives) SS', 'DRT Yes/No Recognitions Source Recognition Discriminability (d) (Hits vs. List B False Positives [5]) Raw', 'DRT Yes/No Recognitions Source Recognition Discriminability (d) (Hits vs. List B False Positives [5]) SS', 'DRT Yes/No Recognitions Semantic Recognition Discriminability (List A vs. List B Shared [8] & Prototypical [8] False Positives) Raw', 'DRT Yes/No Recognitions Semantic Recognition Discriminability (List A vs. List B Shared [8] & Prototypical [8] False Positives) SS', 'DRT Yes/No Recognitions Novel Recognition Discriminability (Hits vs. Prototypical[8] & Unrelated [8] False Positives) Raw', 'DRT Yes/No Recognitions Novel Recognition Discriminability (Hits vs. Prototypical[8] & Unrelated [8] False Positives) SS', 'DRT Yes/No Recognition Total Response Bias (C) Raw', 'DRT Yes/No Recognition Total Response Bias (C) SS', 'DRT Forced Choice Recognition % Total Accuracy (Hits [8]/16)*100 Raw', 'DRT Forced Choice Recognition % Total Accuracy (Hits [8]/16)*100 % with this score', 'DRT Forced Choice Recognition % Total Accuracy (Hits [8]/16)*100 Cum. % w/better score', 'DRT Forced Choice Recognition % Concrete Accuracy (Hits [4]/8)*100 Raw', ' DRT Forced Choice Recognition % Concrete Accuracy (Hits [4]/8)*100 % with this score',
-'DRT Forced Choice Recognition % Concrete Accuracy (Hits [4]/8)*100 Cum % w/better score', 'DRT Forced Choice Recognition % Abstract Accuracy (Hits [4]/8)*100 Raw', 'DRT Forced Choice Recognition % Abstract Accuracy (Hits [4]/8)*100 % with this score', 'DRT Forced Choice Recognition % Abstract Accuracy (Hits [4]/8)*100 Cum. % w/better score', 'RRCM Total Recognition Discriminability vs. Long Delay Free Recall Percent Change', 'RRCM Total Recognition Discriminability vs. Long Delay Free Recall Z-Score Difference', 'RRCM Total Recognition Discriminability vs. Long Delay Free Recall Discriminability Percent Change', 'RRCM Total Recognition Discriminability vs. Long Delay Free Recall Discriminability Z-Score Difference', 'CIWC Number of target words recalled at least once, but missed on Forced Choice Recognition Raw', 'CIWC Number of target words recalled at least once, but missed on Forced Choice Recognition % with this score', 'CIWC Number of target words recalled at least once, but missed on Forced Choice Recognition Cum. % w/better score', 'CIWC Number of target words that were Hits on Yes/No Recognition, but missed on Forced Choice Recognition Raw', 'CIWC Number of target words that were Hits on Yes/No Recognition, but missed on Forced Choice Recognition % with this score', 'CIWC Number of target words that were Hits on Yes/No Recognition, but missed on Forced Choice Recognition Cum. % w/better score']
+header_labels = ['record_id','redcap_event_name', 'cvlt_completed', 'cvlt_examiner', 'cvlt_fr_1_raw', 'cvlt_fr_1_std', 'cvlt_fr_1_sc_raw', 'cvlt_fr_1_sc_std', 'cvlt_fr_1_rd_raw', 'cvlt_fr_1_rd_std', 'cvlt_fr_2_raw', 'cvlt_fr_2_std', 'cvlt_fr_2_sc_raw', 'cvlt_fr_2_sc_std', 'cvlt_fr_2_rd_raw', 'cvlt_fr_2_rd_std', 'cvlt_fr_3_raw', 'cvlt_fr_3_std', 'cvlt_fr_3_sc_raw', 'cvlt_fr_3_sc_std', 'cvlt_fr_3_rd_raw', 'cvlt_fr_3_rd_std','cvlt_fr_4_raw', 'cvlt_fr_4_std', 'cvlt_fr_4_sc_raw', 'cvlt_fr_4_sc_std', 'cvlt_fr_4_rd_raw', 'cvlt_fr_4_rd_std', 'cvlt_fr_5_raw', 'cvlt_fr_5_std', 'cvlt_fr_5_sc_raw', 'cvlt_fr_5_sc_std', 'cvlt_fr_5_rd_raw', 'cvlt_fr_5_rd_std', 'cvlt_frtotal_raw', 'cvlt_frtotal_tscore', 'cvlt_frtotal_sc_raw', 'cvlt_frtotal_sc_std', 'cvlt_frtotal_rd_raw', 'cvlt_frtotal_rd_std','cvlt_listb_raw', 'cvlt_listb_std', 'cvlt_listb_sc_raw', 'cvlt_listb_sc_std', 'cvlt_listb_rd_raw', 'cvlt_listb_rd_std', 'cvlt_sdfr_raw', 'cvlt_sdfr_std', 'cvlt_sdfr_sc_raw', 'cvlt_sdfr_sc_std', 'cvlt_sdfr_rd_raw', 'cvlt_sdfr_rd_std','cvlt_sdcr_raw', 'cvlt_sdcr_std', 'cvlt_sdcr_sc_raw', 'cvlt_sdcr_sc_std', 'cvlt_sdcr_rd_raw', 'cvlt_sdcr_rd_std','cvlt_ldfr_raw', 'cvlt_ldfr_std', 'cvlt_ldfr_sc_raw', 'cvlt_ldfr_sc_std', 'cvlt_ldfr_rd_raw', 'cvlt_ldfr_rd_std', 'cvlt_ldcr_raw', 'cvlt_ldcr_std', 'cvlt_ldcr_sc_raw', 'cvlt_ldcr_sc_std', 'cvlt_ldcr_rd_raw', 'cvlt_ldcr_rd_std',
+'cvlt_lc_sc_raw', 'cvlt_lc_sc_std', 'cvlt_lc_scf_raw', 'cvlt_lc_scf_std', 'cvlt_lc_scb_raw', 'cvlt_lc_scb_std', 'cvlt_lc_subjcb_raw','cvlt_lc_subjcb_std', 'cvlt_lc_rfp_raw', 'cvlt_lc_rfp_std', 'cvlt_lc_rfm_raw', 'cvlt_lc_rfm_std', 'cvlt_lc_rfr_raw', 'cvlt_lc_rfr_std', 'cvlt_lc_tls_1_5_raw', 'cvlt_lc_tls_1_5_std', 'cvlt_lc_tls_1_2_raw', 'cvlt_lc_tls_1_2_std', 'cvlt_lc_tls_2_5_raw', 'cvlt_lc_tls_2_5_std', 'cvlt_lc_atrc_raw', 'cvlt_lc_atrc_std', 'cvlt_rcm_pi_pc', 'cvlt_rcm_pi_zscore', 'cvlt_rcm_sdri_pc', 'cvlt_rcm_sdri_zscore', 'cvlt_rcm_ldr_trial5_pc', 'cvlt_rcm_ldr_trial5_zscore', 'cvlt_rcm_ldr_sdfr_pc', 'cvlt_rcm_ldr_sdfr_zscore', 'cvlt_re_tr_raw',
+'cvlt_re_tr_std', 'cvlt_re_ti_raw', 'cvlt_re_ti_std', 'cvlt_re_tiri_raw', 'cvlt_re_tiri_std', 'cvlt_re_tdri_raw', 'cvlt_re_tdri_std', 'cvlt_re_tfri_raw', 'cvlt_re_tfri_std', 'cvlt_re_tcri_raw', 'cvlt_re_tcri_std', 'cvlt_re_tnci_raw', 'cvlt_re_tnci_per_with', 'cvlt_re_tnci_cum_bet', 'cvlt_re_tsi_raw', 'cvlt_re_tsi_per_with', 'cvlt_re_tsi_cum_bet', 'cvlt_re_tali_raw',
+'cvlt_re_tali_per_with', 'cvlt_re_tali_cum_bet', 'cvlt_re_trd_raw', 'cvlt_re_trd_std', 'cvlt_re_ird_raw', 'cvlt_re_ird_std', 'cvlt_re_drd_raw', 'cvlt_re_drd_std', 'cvlt_re_frd_raw', 'cvlt_re_frd_std', 'cvlt_re_cr_raw', 'cvlt_re_cr_std', 'cvlt_drt_th_raw', 'cvlt_drt_th_std', 'cvlt_drt_rtfp_raw', 'cvlt_drt_rtfp_std',
+'cvlt_drt_rtrd_raw', 'cvlt_drt_rtrd_std', 'cvlt_drt_srd_raw', 'cvlt_drt_srd_std', 'cvlt_drt_srdis_raw', 'cvlt_drt_srdis_std', 'cvlt_drt_nrd_raw', 'cvlt_drt_nrd_std', 'cvlt_drt_rtrb_raw', 'cvlt_drt_rtrb_std', 'cvlt_drt_fcr_tot_acc_raw', 'cvlt_drt_fcr_tot_acc_per_with', 'cvlt_drt_fcr_tot_acc_cum_bet', 'cvlt_drt_fcr_con_acc_raw', 'cvlt_drt_fcr_con_acc_per_with',
+'cvlt_drt_fcr_con_acc_cum_bet', 'cvlt_drt_frc_abs_acc_raw', 'cvlt_drt_frc_abs_acc_per_with', 'cvlt_drt_frc_abs_acc_cum_bet', 'cvlt_rcm_trd_ldfr_pc', 'cvlt_rcm_trd_ldfr_zscore', 'cvlt_rcm_trd_ldfrd_pc', 'cvlt_rcm_trd_ldfrd_zscore', 'cvlt_ciwc_recall_1_raw', 'cvlt_ciwc_recall_1_per_with', 'cvlt_ciwc_recall_1_cum_bet', 'cvlt_ciwc_hit_yn_raw', 'cvlt_ciwc_hit_yn_per_with', 'cvlt_ciwc_hit_yn_cum_bet']
 data_line = [6, 29, 30, 31, 32, 33, 34, 35, 42, 43, 44, 45, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 68, 70, 72, 73, 82, 83, 84, 85, 86, 87, 90, 91, 92,
 95, 96, 97, 98, 99, 108, 109, 111, 113, 114, 115, 116, 110, 112, 120, 121, 126, 127]
 raw_data = []
 wanted_data = []
 data_organized = []
 list_to_append = []
+cvlt_examiner = [input('Name of examiner:	')] 
+redcap_event_name = 'day_2_arm_1'
 
 while True:
 	try: 
@@ -65,7 +67,9 @@ for values in data_line:
 	if values == 29 or values == 30 or values == 31 or values == 32 or values == 33 or values == 35:
 		wanted_data.append(raw_data[values][2:8])
 	elif values == 6:
-		wanted_data.append(raw_data[values][2:3])
+		wanted_data.append(['1'])
+		wanted_data.insert(1, [redcap_event_name])
+
 		with open(filepath2, 'a', newline='\n') as csvfile:
 			writeCSV = csv.writer(csvfile, delimiter=',')
 		with open(filepath2, 'r', newline='') as csvfile:
@@ -79,6 +83,20 @@ for values in data_line:
 					else:
 						csvfile.close()
 						break
+		complete_file = False
+		while complete_file == False:
+							cvlt_completed = input('Is CVLT complete? (y/n)	')
+							if cvlt_completed == 'y' or cvlt_completed == 'Y':
+								cvlt_completed = '1'
+								wanted_data.insert(2,[cvlt_completed])
+								complete_file = True
+							elif cvlt_completed == 'n' or cvlt_completed == 'N':
+								cvlt_completed = '0'
+								wanted_data.insert(2,[cvlt_completed])
+								complete_file = True
+							else:
+								complete_file == False
+		wanted_data.insert(3, cvlt_examiner)
 	elif values == 34:
 		wanted_data.append(raw_data[values][3:5])
 		wanted_data.append(raw_data[values][6:10])
@@ -128,7 +146,9 @@ wanted_data.insert(49, raw_data[108][9:12])
 
 for sublist in wanted_data:
     for item in sublist:
-        data_organized.append(item)
+    	if item == '---':
+    		item = item.replace('---', '')
+    	data_organized.append(item)
 
 
 # Use above line of code if using a blank csv file to have headers be inserted into the csv file

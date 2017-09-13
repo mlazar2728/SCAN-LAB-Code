@@ -145,10 +145,13 @@ Total_Scores = []
 list_to_append = []
 x = float('nan')
 
-header_labels = ['Participant ID', 'S_Ang', 'S_Ang_F', 'S_Ang_V', 'S_Ang_P', 'T_Ang', 'T_Ang_T', 'T_Ang_R', 'AX_O', 'AX_I', 'AC_O', 'AC_I', 'AX_Index','S_Ang_tscore', 'S_Ang_F_tscore', 'S_Ang_V_tscore', 'S_Ang_P_tscore', 'T_Ang_tscore', 'T_Ang_T_tscore', 'T_Ang_R_tscore', 'AX_O_tscore', 'AX_I_tscore', 'AC_O_tscore', 'AC_I_tscore', 'AX_Index_tscore']
+# header_labels = ['Participant ID', 'S_Ang', 'S_Ang_F', 'S_Ang_V', 'S_Ang_P', 'T_Ang', 'T_Ang_T', 'T_Ang_R', 'AX_O', 'AX_I', 'AC_O', 'AC_I', 'AX_Index','S_Ang_tscore', 'S_Ang_F_tscore', 'S_Ang_V_tscore', 'S_Ang_P_tscore', 'T_Ang_tscore', 'T_Ang_T_tscore', 'T_Ang_R_tscore', 'AX_O_tscore', 'AX_I_tscore', 'AC_O_tscore', 'AC_I_tscore', 'AX_Index_tscore']
+header_labels = ['record_id','redcap_event_name', 'staxi_s_ang_tscore', 'staxi_s_ang_f_tscore', 'staxi_s_ang_v_tscore', 'staxi_s_ang_p_tscore', 'staxi_t_ang_tscore', 'staxi_t_ang_t_tscore', 'staxi_t_ang_r_tscore', 'staxi_ax_index_tscore', 'staxi_ax_o_tscore', 'staxi_ax_i_tscore', 'staxi_ac_o_tscore', 'staxi_ac_i_tscore']
 Score_Categories = ['S_Ang', 'S_Ang_F', 'S_Ang_V', 'S_Ang_P', 'T_Ang', 'T_Ang_T', 'T_Ang_R', 'AX_O', 'AX_I', 'AC_O', 'AC_I', 'AX_Index']
 ID = input('Particiapnt ID:	')
 Total_Scores.append(ID)
+redcap_event_name = 'day_1_arm_1'
+Total_Scores.append(redcap_event_name)
 with open(filepath3, 'a', newline='\n') as csvfile:
 	writeCSV = csv.writer(csvfile, delimiter=',')
 with open(filepath3, 'r', newline='') as csvfile:
@@ -169,7 +172,7 @@ for i in range(len(Score_Categories)):
 for i in range(len(Score_Categories)):
 	find_t_value(Score_Categories[i], Raw_scores[i], Gender, Age, filepath)
 
-Total_Scores = Total_Scores + Raw_scores + T_Scores
+Total_Scores = Total_Scores + T_Scores
 
 write_csv(Total_Scores)
 
