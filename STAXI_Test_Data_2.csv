@@ -1,0 +1,2 @@
+record_id,redcap_event_name,staxi_s_ang_tscore,staxi_s_ang_f_tscore,staxi_s_ang_v_tscore,staxi_s_ang_p_tscore,staxi_t_ang_tscore,staxi_t_ang_t_tscore,staxi_t_ang_r_tscore,staxi_ax_index_tscore,staxi_ax_o_tscore,staxi_ax_i_tscore,staxi_ac_o_tscore,staxi_ac_i_tscore
+1,day_1_arm_1,44,78,80,80,42,80,72,48,44,32,36,60
