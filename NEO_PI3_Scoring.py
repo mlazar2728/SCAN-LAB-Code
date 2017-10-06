@@ -36,7 +36,7 @@ def write_csv(value):
 	with open(filepath3, 'r') as csvfile:
 		readCSV = csv.reader(csvfile, delimiter=',')
 		for line in readCSV:
-			list_to_append.append(line)
+			list_to_append.append(line) 
 		csvfile.close()
 	list_to_append.append(value)
 	if list_to_append[0] != header_labels:
